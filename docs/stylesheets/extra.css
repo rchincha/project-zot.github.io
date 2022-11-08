@@ -1,0 +1,34 @@
+.container {
+  display: inline-block;
+}
+
+.typed-out {
+  color: darkgray;
+  background: black;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  animation: 
+    typing 3s forwards,
+    blink-caret .5s step-end infinite;
+  width: 0;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+#whats-new {
+  padding: 5px;
+  margin: 20px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  background: lightgray;
+  color: black;
+}

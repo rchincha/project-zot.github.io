@@ -1,0 +1,96 @@
+site_name: zotregistry.io
+site_url: https://zotregistry.io
+site_description: Zot Registry
+repo_url: https://github.com/project-zot/zot
+repo_name: project-zot/zot
+edit_uri: ""
+copyright: Copyright &copy; 2017 - 2022 Cisco Systems Inc., All Rights Reserved.
+theme:
+  name: material
+  custom_dir: material
+  palette:
+    - scheme: default
+      toggle:
+        name: Light Mode
+        icon: material/toggle-switch-off-outline
+      primary: amber
+      accent: white
+      media: "(prefers-color-scheme: dark)"
+    - scheme: slate
+      toggle:
+        name: Dark Mode
+        icon: material/toggle-switch
+      primary: indigo
+      accent: white
+      media: "(prefers-color-scheme: light)"
+  favicon: assets/images/favicon.png
+  logo: assets/images/logo.png
+  features:
+    - content.code.annotate
+    - content.tooltips
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Roboto
+    code: Roboto Mono
+extra:
+  homepage: https://zotregistry.io
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/project-zot/zot.git
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/zotregistry
+    - icon: fontawesome/brands/slack
+      link: https://cloud-native.slack.com/archives/C03EGRE4QGH
+  generator: false
+extra_css:
+  - stylesheets/extra.css
+plugins:
+  - search
+  - minify:
+      minify_html: true
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+nav:
+  - Home: index.md
+  - User Guides:
+    - Datapath: user_guides/user_guide_datapath.md
