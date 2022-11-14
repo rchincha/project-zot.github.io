@@ -1,0 +1,38 @@
+{% extends "overrides/main.html" %}
+{% block tabs %}
+  {{ super() }}
+  <style>.md-header{position:initial}.md-main__inner{margin:0}.md-content{display:none}@media screen and (min-width:60em){.md-sidebar--secondary{display:none}}@media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}</style>
+  <section class="tx-container">
+    <div class="md-grid md-typeset">
+      <div class="tx-hero">
+        <div class="tx-hero__image">
+          <img src="assets/images/illustrations/home.png" alt="" width="70%" draggable="false">
+        </div>
+        <div class="tx-hero__content">
+          <h1>Zot Registry</h1>
+          <h2>OCI-native container image registry, simplified!</h2>
+          <div class="container"><div class="typed-out">docker run -p 5000:5000 ghcr.io/project-zot/zot-linux-amd64:latest</div></div>
+          <p>Make end-to-end <strong>OCI-native Secure Software Supply Chain</strong> a reality!</p>
+          <div id="whats-new">
+            <h4><u>What's New?</u></h4>
+            <ul>
+              <li><a href="https://www.cisco.com/"><strong>Cisco Systems, Inc.</strong></a> has submitted <strong>zot</strong> to CNCF as a Sandbox Project</li>
+              <li>OCI Artifacts <strong>and</strong> References</li>
+              <li>Try our beta deployment at <a href="https://zothub.io" target="_blank">zothub.io</a></li>
+            </ul>
+          </div>
+          <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}" class="md-button md-button--primary">
+            Get Started
+          </a>
+          <a href="{{ 'user_guide/image_build' | url }}" title="User Guide" class="md-button">
+            User Guide
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}
+  {{ super() }}
+{% endblock %}
