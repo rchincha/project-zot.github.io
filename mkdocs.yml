@@ -92,5 +92,12 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Architecture:
+    - architecture.md
+  - Developer Guide:
+    - developer-guide.md
   - User Guides:
     - Datapath: user_guides/user_guide_datapath.md
+  - Articles:
+    - Clustering: articles/clustering.md
+
