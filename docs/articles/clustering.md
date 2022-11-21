@@ -1,3 +1,4 @@
+
 # zot Clustering
 
 Revised: 2022-10-17
@@ -6,6 +7,7 @@ Revised: 2022-10-17
 >
 > -   Stateless `zot` instances to simplify scale out
 > -   Bare-metal and Kubernetes deployments
+
 
 To ensure high-availability of the registry,`zot` supports a clustering
 scheme with stateless `zot` instances/replicas fronted by a loadbalancer
@@ -17,8 +19,6 @@ aggregate network throughput.
 ![504569](../assets/images/504569.jpg)
 
 Clustering is supported in both bare-metal and Kubernetes environments.
-
-
 > **Note:**
 > The remote backend storage must be [S3 API-compatible](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html).
 
