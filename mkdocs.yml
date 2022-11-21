@@ -91,13 +91,24 @@ markdown_extensions:
   - pymdownx.tilde
 
 nav:
-  - Home: index.md
-  - Architecture:
-    - architecture.md
-  - Developer Guide:
-    - developer-guide.md
-  - User Guides:
-    - Datapath: user_guides/user_guide_datapath.md
-  - Articles:
-    - Clustering: articles/clustering.md
-
+  - 'Home': 'zot-toc.md'
+  - 'General': 
+    - 'Concepts': 'general/zot-concepts.md'
+    - 'Architecture': 'general/architecture.md'
+    - 'Artifacts': 'general/artifacts.md'
+  - 'User Guides':
+    - 'Push and Pull Image Content': 'user-guides/user-guide-datapath.md'
+  - 'Installation Guides':
+    - 'Installing zot on Bare Metal Linux': 'install-guides/install-guide-linux.md'
+    - 'Installing zot with Kubernetes and Helm': 'install-guides/install-guide-k8s.md'
+  - 'Administrator Guide': 
+    - 'zot Administrator Guide': 'admin-guide/admin-guide.md'
+  - 'Developer Guide': 
+    - 'zot Developer Guide': 'developer-guide/developer-guide.md'
+  - 'Articles':
+    - 'CI/CD Pipeline': 'articles/building-ci-cd-pipeline.md'
+    - 'Authentication and Authorization': 'articles/authn-authz.md'
+    - 'Security Posture': 'articles/security-posture.md'
+    - 'Storage Planning': 'articles/storage.md'
+    - 'Clustering': 'articles/clustering.md'
+    - 'Benchmarking with zb': 'articles/benchmarking-with-zb.md'

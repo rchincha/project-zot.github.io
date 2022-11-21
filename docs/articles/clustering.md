@@ -1,17 +1,13 @@
-# 
+
+# zot Clustering
 
 Revised: 2022-10-17
 
-<div class="informalexample">
+> High availability of the `zot` registry is supported by the following features:
+>
+> -   Stateless `zot` instances to simplify scale out
+> -   Bare-metal and Kubernetes deployments
 
-High availability of the `zot` registry is supported by the following
-features:
-
--   Stateless `zot` instances to simplify scale out
-
--   Bare-metal and Kubernetes deployments
-
-</div>
 
 To ensure high-availability of the registry,`zot` supports a clustering
 scheme with stateless `zot` instances/replicas fronted by a loadbalancer
@@ -23,29 +19,23 @@ aggregate network throughput.
 ![504569](../assets/images/504569.jpg)
 
 Clustering is supported in both bare-metal and Kubernetes environments.
+> **Note:**
+> The remote backend storage must be [S3 API-compatible](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html).
 
-<div class="note">
 
-The remote backend storage must be [S3
-API-compatible](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html).
+## Bare-metal deployment
 
-</div>
+### Prerequisites
 
-# Bare-metal deployment
+-   A highly-available loadbalancer such as `HAProxy` configured to direct traffic to `zot` replicas.
 
-## Prerequisites
-
--   A highly-available loadbalancer such as `HAProxy` configured to
-    direct traffic to `zot` replicas.
-
--   Multiple `zot` replicas as `systemd` services hosted on mutiple
-    hosts or VMs.
+-   Multiple `zot` replicas as `systemd` services hosted on mutiple hosts or VMs.
 
 -   AWS S3 API-compatible remote backend storage.
 
-# Kubernetes deployment
+## Kubernetes deployment
 
-## Prerequisites
+### Prerequisites
 
 -   A `zot` Kubernetes
     [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
@@ -60,7 +50,7 @@ API-compatible](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html).
     Gateway](https://kubernetes.io/docs/concepts/services-networking/ingress/)
     if the service needs to be exposed outside.
 
-# Implementing stateless zot
+## Implementing stateless zot
 
 `zot` maintains two types of durable state:
 
@@ -72,7 +62,7 @@ In a stateless clustering scheme, the image data is stored in the remote
 storage backend and the registry cache is disabled by turning off both
 deduplication and garbage collection.
 
-# Ecosystem tools
+## Ecosystem tools
 
 The [OCI Distribution
 Specification](https://github.com/opencontainers/distribution-spec)
