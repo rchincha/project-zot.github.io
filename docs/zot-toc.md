@@ -18,10 +18,6 @@
 -   User Guides
 
     -   [Using zot with Datapath Clients](user-guides/user-guide-datapath.md)
-
--   [Administrator Guide](admin-guide/admin-guide.md)
-
--   [Developer Guide](developer-guide/developer-guide.md)
   
 -   Installation Guides
 
@@ -29,6 +25,9 @@
 
     -   [Kubernetes Deployment](install-guides/install-guide-k8s.md)
 
+-   [Administrator Guide](admin-guide/admin-guide.md)
+
+-   [Developer Guide](developer-guide/developer-guide.md)
 
 # Articles
 
